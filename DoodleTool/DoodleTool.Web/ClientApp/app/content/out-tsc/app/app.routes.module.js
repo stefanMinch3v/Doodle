@@ -7,7 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AccountModule } from './components/account/account.module';
+import { CanvasModule } from './components/canvas/canvas.module';
 var routes = [
+    {
+        path: 'canvas',
+        loadChildren: function () { return CanvasModule; }
+    },
     {
         path: 'account',
         loadChildren: function () { return AccountModule; } // lazy loading items...

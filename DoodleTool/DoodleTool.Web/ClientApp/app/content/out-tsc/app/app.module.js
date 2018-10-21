@@ -13,6 +13,7 @@ import { SharedModule } from './components/shared/shared.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './core/services/guards/auth.guard';
 import { AdminGuard } from './core/services/guards/admin.guard';
+import { CanvasModule } from './components/canvas/canvas.module';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -26,7 +27,8 @@ var AppModule = /** @class */ (function () {
                 AppRoutesModule,
                 HttpClientModule,
                 AccountModule,
-                SharedModule
+                SharedModule,
+                CanvasModule
             ],
             providers: [AuthGuard, AdminGuard],
             bootstrap: [AppComponent]

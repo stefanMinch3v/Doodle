@@ -39,7 +39,7 @@
         [AllowAnonymous]
         [HttpPost]
         [Route("register")]
-        public async Task<IActionResult> Register([FromBody]RegisterViewModel model)
+        public async Task<IActionResult> Register([FromBody]RegisterFormViewModel model)
         {
             if (model == null || !this.ModelState.IsValid)
             {
@@ -62,7 +62,7 @@
         [HttpPost]
         [AllowAnonymous]
         [Route("login")]
-        public async Task<IActionResult> Login([FromBody]LoginViewModel model)
+        public async Task<IActionResult> Login([FromBody]LoginFormViewModel model)
         {
             if (!this.ModelState.IsValid || this.ModelState == null)
             {

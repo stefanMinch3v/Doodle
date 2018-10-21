@@ -10,5 +10,7 @@
             : base(options)
         {
         }
+
+        public DbSet<LogSearchingOperation> LogSearchingOperations { get; set; }
     }
 }
